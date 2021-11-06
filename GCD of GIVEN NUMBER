@@ -1,0 +1,36 @@
+WHAT IS GCD?
+GREATEST COMMON DIVISION 
+What is the GCD OF 20 AND 40 
+= FACTORS OF 20 ARE 1,2,4,5,10,20
+=FACTORS OF 40 ARE 1,2,4,5,8,10,20,40
+= GREATEST COMMON FACTORS ARE 20 
+SO 20 IS THE GCD OF 20 AND 40.
+
+PROGRAM FOR GCD IN JAVA
+
+import java.util.*;
+public class Main{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number 1");
+        int a = sc.nextInt();
+        System.out.println("Enter the number 2");
+        int b = sc.nextInt();
+        int c = GCD(a,b);
+        System.out.println("The GCD of given number is "+c);
+    }
+        
+        public static int GCD(int a,int b){
+            if(a==0){
+                return b;
+            }
+            else if(b==0){
+                return a;
+            }
+            else{
+              return GCD(b,a%b);
+            }
+            }
+}
+            
+            

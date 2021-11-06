@@ -1,0 +1,28 @@
+import java.util.*;
+public class Main{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the num1");
+        int a = sc.nextInt();
+        System.out.println("Enter the num2 ");
+        int b = sc.nextInt();
+        boolean fact =true;
+        int lcm =(a>b)? a : b;
+        while(fact){
+            if((lcm%a==0)&&(lcm%b==0)){
+                System.out.println("The LCM of given number is "+lcm);
+                fact =false;
+            }
+            lcm++;
+        }
+    }
+}
+
+
+
+
+How to find LCM?
+20 and 40
+2*10 and 20*2
+2*2*5 and 2*10*2
+2*2*5 and 2*2*5*2

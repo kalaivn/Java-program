@@ -1,0 +1,41 @@
+import java.util.*;
+public class Main{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        boolean b = false;
+        System.out.println("Enter the number");
+        int n = sc.nextInt();
+        System.out.println("Enter another Number");
+        int n1 = sc.nextInt();
+        System.out.println("Enter the Function answer");
+        int n3 = sc.nextInt();
+        if((n+n1)==n3){
+        System.out.println(n+"+"+n1+" is "+n3);
+        b = true;
+        }
+    if((n-n1)==n3){
+            System.out.println(n+"-"+n1+" is "+n3);
+            b = true;
+    }
+        if((n*n1)==n3){
+            System.out.println(n+"*"+n1+" is "+n3);
+            b = true;
+        }
+        if((n/n1)==n3){
+            System.out.println(n+"/"+n1+" is "+n3);
+            b = true;
+        }
+ if(b==false){
+            System.out.println(n3+" is an invalid number");
+        }
+
+    }
+}
+
+
+//if we use if else then it doesnt check all the statement
+if we use if statement then checks all the statement
+for example first input 2 and second input 2
+then function ans is 4
+output should be 2+2 =4
+2*2=4

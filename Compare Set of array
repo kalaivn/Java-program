@@ -1,0 +1,35 @@
+import java.util.*;
+public class Main{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        int kalai[] = new int[5];
+        int ram[] = new int[5];
+        int kscore =0;
+        int rscore =0;
+        System.out.println("Score of Kalai:");
+        for(int i=0;i<5;i++){
+            kalai[i] = sc.nextInt();
+        }
+        System.out.println("Score of Ram:");
+        for(int i=0;i<5;i++)
+        {
+            ram[i] = sc.nextInt();
+        }
+        for(int i=0;i<5;i++){
+            if(kalai[i]>ram[i])
+            kscore++;
+            if(ram[i]>kalai[i])
+            rscore++;
+            }
+            if(kscore>rscore){
+                System.out.println("Kalai scores more");
+            }
+            else if(rscore>kscore){
+                System.out.println("Ram scores more");
+            }
+            else{
+                System.out.println("Kalai and Ram equal");
+            }
+    }
+}

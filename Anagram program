@@ -1,0 +1,23 @@
+import java.util.*;
+public class Main{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the Sentence1");
+        String str = sc.nextLine();
+        System.out.println("Enter the Sentence2");
+        String str1 = sc.nextLine();
+        String input1[] = str.split("");
+        String input2[] = str1.split("");
+        Arrays.sort(input1);
+        Arrays.sort(input2);
+        boolean k = Arrays.equals(input1,input2);
+        if(k)
+        {
+         System.out.println(str+" "+str1+" are Anagram");   
+        }
+        else{
+            System.out.println(str+" "+str1+" are not an Anagram");
+        }
+    }
+}

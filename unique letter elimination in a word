@@ -1,0 +1,51 @@
+import java.util.*;
+import java.util.regex.*;
+public class Main{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the Sentence:");
+        String s = sc.nextLine();
+
+    
+        if(Pattern.matches("[A-Za-z ]+",s)){
+        String str[] = s.split(" ");
+        String result ="";
+        for(int k=0;k<str.length;k++){
+            String sub="";
+            int count =0;
+        for(int i=0;i<str[k].length();i++){
+            count =0;
+            char ch =str[k].charAt(i);
+            for(int j=0;j<str[k].length();j++){
+                if(i==j)
+                continue;
+                else if(ch==str[k].charAt(j))
+                    count++;
+                    
+                }
+                if(count==0){
+                sub+=ch;
+                }
+                else{
+                continue;
+                }
+        }
+                    
+            
+                result+=sub+" ";
+            }
+            System.out.println(result);
+        
+        
+        }else{
+            System.out.println("Inavlid");
+            return;
+        }
+    
+        
+            
+            
+        
+    }
+}

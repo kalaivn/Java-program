@@ -1,0 +1,35 @@
+import java.util.*;
+import java.util.regex.*;
+public class Main{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the String:");
+        String str = sc.nextLine();
+        if(Pattern.matches("[A-Za-z0-9 ]+",str))
+        {
+          String array[]  = str.split("");
+          System.out.println("Enter the Letter");
+          String ch = sc.nextLine();
+          int same =0;
+          boolean flag = false;
+          int nsame =0;
+          for(int i=0;i<array.length;i++){
+              if(array[i].equalsIgnoreCase(ch))
+              same+=i;
+              flag = true;
+          
+          nsame+=i;
+          }
+          
+        
+        if(flag==false)
+        System.out.println("Score is 0");
+        else{
+            System.out.println("Score is "+((same)*(nsame)));
+        }
+        }
+        else{
+            System.out.println("String is not avalid");
+        }
+    }
+}

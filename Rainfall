@@ -1,0 +1,27 @@
+import java.util.*;
+public class Main{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the Length of the roof in meters");
+        int roof = sc.nextInt();
+        if(roof<=0){
+            System.out.println("Invalid Input");
+            return;
+        }
+        System.out.println("Enter the breadth of the Roof in meteres");
+        int b = sc.nextInt();
+        if(b<=0){
+            System.out.println("Invalid Input");
+            return;
+        }
+        System.out.println("Enter the rainfall:");
+        int r = sc.nextInt();
+        if(r<=0){
+            System.out.println("Invalid Input");
+            return;
+        }
+        double h = ((roof*b)*(r*10));
+        System.out.printf("Litres %.2f",h);
+        
+    }
+}

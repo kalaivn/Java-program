@@ -1,0 +1,51 @@
+import java.util.*;
+public class Main{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the Size");
+        int n = sc.nextInt();
+        if(n<0){
+            System.out.println("Enter valid input");
+            return;
+        }
+        int a[] = new int[n];
+        System.out.println("Enter the numbers");
+        for(int i=0;i<a.length;i++){
+            a[i] = sc.nextInt();
+            if(a[i]<0){
+                System.out.println("Enter numbers valid");
+                return;
+            }
+        }
+        int b =0;
+        int c=1;
+        int e[] = new int[n];
+        int count =0;
+        int p=0;
+        int j=0;
+        for(int i=0;i<a.length;i++){
+            p = a[i];
+            while(a[i]!=0){
+                b+=a[i]%10;
+                c*=a[i]%10;
+                a[i] = a[i]/10;
+            }
+            if(b==c){
+                e[j] = p;
+                j++;
+                count++;
+            }
+            b=0;
+            c=1;
+        }
+        if(count==0){
+            System.out.println("There is no SPY number");
+            return;
+        }
+        else
+        System.out.println("Display SPY");
+        for(int i=0;i<count;i++){
+            System.out.println(e[i]);
+        }
+    }
+}

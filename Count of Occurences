@@ -1,0 +1,25 @@
+import java.util.*;
+import java.util.regex.*;
+public class Main{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the Word");
+        String str = sc.nextLine().toLowerCase();
+        System.out.println("Enter the SubString");
+        String sub = sc.nextLine().toLowerCase();
+         Pattern p = Pattern.compile(sub);
+         Matcher m = p.matcher(str);
+         int count=0;
+         while(m.find()){
+             count++;
+         }
+         if(count==0){
+             System.out.println("SubString is not present");
+             return;
+         }
+         else{
+             System.out.printf("Substring present %d times in a word",count);
+         }
+        
+    }
+}

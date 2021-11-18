@@ -1,0 +1,24 @@
+import java.util.*;
+import java.util.regex.*;
+public class Main{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the Sentence");
+        String s = sc.nextLine();
+        String str[] = s.split(" ");
+        if(str.length<2){
+            System.out.println("The Sentence is Too Short");
+        }
+        else{
+            for(int i=0;i<str.length;i++){
+                System.out.print(str[i].substring(0,1).toUpperCase());
+            }
+            System.out.print(" Stands For ");
+            for(int i=0;i<str.length;i++){
+                System.out.print(str[i].substring(0,1).toUpperCase()+
+                str[i].substring(1)+ " ");
+            }
+        }
+        
+    }
+}

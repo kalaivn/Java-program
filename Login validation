@@ -1,0 +1,44 @@
+import java.util.*;
+public class Main{
+    private String userName;
+    private String password;
+public void setUserName(String userName){
+    this.userName = userName;
+}
+public String getUserName(){
+    return this.userName;
+}
+public void setPassword(String password){
+    this.password = password;
+}
+public String getPassword(){
+    return this.password;
+    
+}
+public Main(String userName, String password){
+    this.userName = userName;
+    this.password = password;
+}
+public boolean validate(){
+    if(this.userName.equals("kalai")&&this.password.equals("123abc")){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+public static void main (String[] args) {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter the userName");
+    String name = sc.nextLine();
+    System.out.println("Enter the Password");
+    String password = sc.nextLine();
+    Main obj = new Main(name, password);
+    if(obj.validate()){
+        System.out.println("Valid User");
+    }
+    else{
+        System.out.println("Invalid User");
+    }
+}
+}

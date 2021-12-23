@@ -1,0 +1,18 @@
+import java.util.*;
+import java.util.regex.*;
+public class Main{
+    public static void main (String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the PAN Number");
+        String panNo = sc.nextLine();
+        String regex = "^[A-Z]{5}[0-9]{4}[A-Z]{1}$";
+        Pattern p = Pattern.compile(regex);
+        Matcher m = p.matcher(panNo);
+        if(m.find()){
+            System.out.println("Valid PAN Number");
+        }
+        else{
+            System.out.println("Invalid PAN Number");
+        }
+    }
+}

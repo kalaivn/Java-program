@@ -1,0 +1,39 @@
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+		int words=0;
+		int upps = 0;
+		System.out.println("Enter the sentence:");
+		char[] sen = sc.nextLine().toCharArray();
+		int len = sen.length;
+		for(int i=0;i<len;i++){
+		    if(i==0 || Character.isWhitespace(sen[i-1])){
+		        words++;
+		        if(Character.isLowerCase(sen[i])){
+		            sen[i] = Character.toUpperCase(sen[i]);
+		        }
+		        else{
+		            upps++;
+		        }
+		    }
+		}
+		if(words==upps){
+		    System.out.println("Alraedy in Uppercase");
+		}
+		else{
+		    for(int i=0;i<len;i++){
+		        System.out.print(sen[i]);
+		    }
+		}
+		
+	}
+}

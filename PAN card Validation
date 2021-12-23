@@ -1,0 +1,26 @@
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+import java.util.*;
+import java.util.regex.*;
+public class Main
+{
+	public static void main(String[] args) {
+     System.out.println("Generate your Security Code");
+     Scanner sc = new Scanner(System.in);
+     String code = sc.nextLine();
+     String regex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[@*#])[a-zA-Z0-9@*#]{8,}$";
+     Pattern p =Pattern.compile(regex);
+     Matcher m = p.matcher(code);
+     if(m.find()){
+         System.out.println("Security Code Generated Successfully");
+     }
+     else{
+         System.out.println("Security Code is not generated");
+     }
+	}
+}

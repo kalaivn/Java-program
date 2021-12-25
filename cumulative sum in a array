@@ -1,0 +1,23 @@
+import java.util.*;
+public class Main{
+    public static void main (String[] args) {
+        Scanner sc = new Scanner(System.in);
+    System.out.println("Enter the array size");
+    int n = sc.nextInt();
+    int sum =0;
+    if(n>0&&n<21){
+        System.out.println("Enter the array Elements");
+        int a[] = new int[n];
+    for(int i=0;i<n;i++){
+        a[i] = sc.nextInt();
+    }
+    for(int i=0;i<n;i++){
+        sum+=a[i];
+        System.out.println(sum+" ");
+    }
+    }
+    else{
+        System.out.println("Invalid array size");
+    }
+    }
+}

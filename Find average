@@ -1,0 +1,41 @@
+import java.util.*;
+public class Main{
+    public float calculateAverage(int[] age){
+        float sum =0.0f;
+        int l = age.length;
+        for(int i=0;i<l;i++){
+            sum+=age[i];
+        }
+        float avg = (float)sum/l;
+        return avg;
+    }
+    public static void main (String[] args) {
+        Scanner sc = new Scanner(System.in);
+    System.out.println("Enter the no of employees:");
+    int n = sc.nextInt();
+    int flag=0;
+    if(n<=1){
+        System.out.println("Please Entered a valid age count!");
+    }
+    else{
+        System.out.printf("Enter the age of %d employees:%n",n);
+        int a[] = new int[n];
+        for(int i=0;i<n;i++ ){
+            int f = sc.nextInt();
+            if(f>28&&f<48){
+                a[i] = f;
+            }
+            else{
+                System.out.println("please entered a valid age!");
+                flag=1;
+                break;
+            }
+        }
+        if(flag==0){
+            Main m = new Main();
+            float avg = m.calculateAverage(a);
+            System.out.printf("The average age is %.2f",avg);
+        }
+    }
+    }
+}

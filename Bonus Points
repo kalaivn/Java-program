@@ -1,0 +1,40 @@
+import java.util.*;
+public class Main{
+    public static void main (String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int r;
+        int even =1;
+        int odd=1;
+        int d;
+    System.out.println("Enter the Distance Travelled:");
+    int n = sc.nextInt();
+    if(n<0){
+        System.out.println("Invalid Range");
+    }
+    else if(n==0){
+        System.out.println("Your bouns points is 0");
+    }
+    else{
+        while(n>0){
+            r=n%10;
+            even *=r;
+            n=n/10;
+            if(n>0){
+                d=n%10;
+                odd*=d;
+                n=n/10;
+            }
+            
+        }
+        if(even==odd){
+        System.out.printf("Your Bonus points is %d",even*2);
+        }
+        else if(even>odd){
+            System.out.printf("Your Bonus points is %d",even);
+        }
+        else{
+            System.out.printf("Your Bonus points is %d",odd);
+        }
+    }
+    }
+}

@@ -1,0 +1,39 @@
+import java.util.*;
+public class Main{
+    public static void main (String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the String");
+        String str=sc.next();
+        int diff=str.charAt(0)-str.charAt(1);
+        for(int i=0;i<str.length()-1;i++){
+            int val1=str.charAt(i);
+            int val2=str.charAt(i+1);
+            if(diff != (val1 - val2)){
+                System.out.println(str+ " is not in sequence");
+                return;
+            }
+        }
+    System.out.println("Enter the sequence times");
+    int seq=sc.nextInt();
+    if(seq<=0){
+        System.out.println(seq +" is in valid");
+    }
+    int output=str.charAt(str.length()-1);
+    for(int i=0;i<seq;i++){
+        output=output - diff;
+        if(output > 122){
+            output=output-26;
+            char last=(char) output;
+            System.out.print(last);
+        } else if(output<97){
+            output=output+26;
+            char last =(char) output;
+            System.out.print(last);
+        } else{
+            char last =(char) output;
+            System.out.print(last);
+        }
+    }
+    
+        }
+    }
